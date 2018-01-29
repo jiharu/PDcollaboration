@@ -20,161 +20,125 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
-# Class 3: 
+# Class 3: 3D in Photoshop
+Reference: Gee, Zorana , 3D in Photoshop, Focal Press, 2013.   
+Practice images from Elizabeth Viscomi (*Thanks for your beautiful drawings!*) 
 
-# Practice 
-## Photo to 3D
-- [How to Turn a Single Photo into a 3D Model & 3D Print](https://i.materialise.com/blog/how-to-turn-a-single-photo-into-a-3d-print-with-a-free-online-app/)
+# Practice: [creating 3D](http://proquestcombo.safaribooksonline.com.ezproxy.torontopubliclibrary.ca/book/animation-and-3d/9780240813776/3dot-getting-started-with-3d-in-photoshop/33_converting_to_3d?uicode=torontopl) 
 
-## 2D gray image to 3D using online apps
-- [Shapeways app](https://www.shapeways.com/creator/2dto3d#landing) 
+There are at least five ways to take 2D images into 3D geometry. 
 
-### Source: bitmap images such as .jpg or ,png. 
+## Preparation
+- Open Photoshop. Change the workspace into *3D* (menu: Window/Workspace/3D as in the image below)  
+- Note: Save often so that you don't lose too much if your 3D file in Photoshop crashes.
 
-![2d3d src](img/07/giraffe-head-silhouette-clip-art-zebra.jpg)
-This is the sourceimage as .jpg
+![3d](img/02/3d00.png) 
 
-![2d3d_shape](img/07/shapeways.png)
+## 1. 3D Postcard  
+First open or draw a pixel based image. Then you can apply *New 3D Postcard from Layer* to create a 3D postcard, which you can move, rotate, scale, add lights, and render.
 
-You can download the converted geometry as .x3db
-And you can transfer this to more widely used geometry extension such as .obj or .stl using NetFabb Studio Basic. 
+![3d](img/02/3d01.png)  
 
-You can download NetFabb Basic [here](http://macdownload.informer.com/netfabb-basic/download/)
+### Navigating 3D  
+There are many 3D tools in Photoshop to help you manipulate your scene components (objects, meshes, cameras and lights) as well as tools that help with selecting and applying materials. The easiest way to manipulate positions of scene components is with the 3D-Axis Tool. Under the 3D Panel you can find a toolbox of 5 rotation-related tools.
 
-### Further tutorials
+![3d](img/02/3d02.png)  
 
-- [How to Fix and Repair Your 3D Files Using Meshlab and Netfabb](https://www.shapeways.com/tutorials/how_to_use_meshlab_and_netfabb)  
+## 2. 3D Shape from Preset
 
-![2d3d shape nf](img/07/netfabb02.png)
+You can apply a 2D image as a texture to any of the preset Photoshop geometries.  
 
-Netfabb Studio Basic.
+![3d](img/02/3d03.png)  
+![3d](img/02/3d04.png)  
 
-![2d3d shape nf01](img/07/netfabb03.png)
+## 3. 3D Repoussé Object
 
-Once you have a geometry, you can combine, edit, and deform the object using your favorite software.
+With vector drawings (Paths), Repoussé allows you to create 3D text, objects, and abstract elements in Photoshop (menu: 3D/Repoussé/Selected Path). 
 
-- [Selva 3D](http://www.selva3d.com/)
+![3d](img/02/3d05.png) 
+Draw or open your vector image.  
 
-![2d3d shape sv01](img/07/selva.png)
+![3d](img/02/3d06.png)   
+Repoussé option window. 
 
-You can transform 2D images into 3D models. However it is free only if you want to download low resolution geometry. From the below image, you can compare the result from 1. Shapeways to NetFabb and the result from 2. Selva3D.
+![3d](img/02/3d07.png)   
+You can change material properties.  
 
-![2d3d shape nf02](img/07/netfabb.png)
+### Export as OBJ file
 
-The first case: Shapeways to NetFabb
+![3d](img/02/3d08.png)   
 
-![2d3d shape sv](img/07/netfabb01.png)
+OBJ has it’s origins with Alias Wavefront, a simple data-format that represents 3D geometry — namely, the position of each vertex, the UV position of each texture coordinate vertex, vertex normals, and the faces that make each polygon defined as a list of vertices, and texture vertices. 
 
-Comparison between the first case and the geometry downloaded from Selva3D. Low quality is free but high quality stl data is not free from Selva3D.
+- [Comparison I between OBJ & FBX](http://aecobjects.com/2014/10/which_format_is_better/)
+- [Comparison II between OBJ & FBX](http://www.reallusion.com/iclone/help/3DXchange5/Pipeline/05_Export/The_Comparison_of_OBJ_FBX.htm)	
 
+### Import to Meshlab
 
+- [Download Meshlab](http://www.meshlab.net/#download)  
 
-## 2D gray image to 3D using Thinkercad
-- [Thinkercad](https://www.tinkercad.com/)  
+MeshLab is an advanced 3D mesh processing software system that is oriented to the management and processing of unstructured large meshes and provides a set of tools for editing, cleaning, healing, inspecting, rendering, and converting these kinds of meshes. MeshLab is free and open-source software, subject to the requirements of the GNU General Public License (GPL), version 2 or later, and is used as both a complete package and a library powering other software. - [Wikipedia](https://en.wikipedia.org/wiki/MeshLab)  
 
-The source image is .svg (a kind of vector graphic), and Thinkercad turns it into 3D geometry immediately.
+![3d](img/02/3d09.png)  
 
-![2d3d shape tc](img/07/thinkercad.png)
+![3d](img/02/3d10.png)  
 
-The dialog window pops up when you import an svg file.
+#### Applying new shaders
 
-![2d3d shape tc01](img/07/thinkercad01.png)
-
-The dialog window pops up when you export the transformed geometry.
-
-------------------------------------
-
-## Using Blender
-### Source: vector image. 
-
-To convert a 2D vector image into 3D using Blender your source image must be an .svg file.
-Black and white silhouette designs work best.
-
-### How:
-- Prepare .svg silhouette vector image.
-- From Blender, import the image.
-
-![2d3d shape bl00](img/07/Chandelier.svg)
-The source vector image as .svg.
-
-![2d3d shape bl](img/07/bl01.png)
-
-- Choose the imported object and scale it up. 
-
-- From the right tool settings, choose the curve and add the Extrude value. It will define the height of the geometry. Then you can export the geometry with several different formats including .obj and .stl.
-
-![2d3d shape bl01](img/07/bl02.png)
+![3d](img/02/3d12.png) 
+Toon.gdp  
  
-### Tutorial
-- [Blender-Converting 2D Image to 3D Object by bugzilla2001](https://www.youtube.com/watch?v=ows2QTiMRPg)  
+![3d](img/02/3d11.png)  
 
+![3d](img/02/3d13.png)  
+Hatch.gdp
 
-----------------------------------------
+## 4. 3D Mesh from Grayscale
 
-## Using Maya
-** The source can be a vector or bitmap image.** 
-### For vector images use Illustrator version 8 .ai or .eps files
+![3d](img/02/3d14.png)  
+Base gray image. 
 
-- [Quick Tip: Converting Vector Logos to 3D from Illustrator to Maya](https://cgi.tutsplus.com/tutorials/quick-tip-converting-vector-logos-to-3d-from-illustrator-to-maya--cg-6466): This has two tutorials. One to extrude and the other using Bevel Plus.   
+![3d](img/02/3d14_01.png)  
 
-### Using bitmap image such as .jpg or .png and more.
+![3d](img/02/3d15.png)  
+![3d](img/02/3d16.png)  
+Applying a new material
 
-- [Maya Tutorial- how to create 3D logo's from pictures](https://www.youtube.com/watch?v=WxlLUDZQS6E)  
+![3d](img/02/3d17.png)  
+Applying a new material
+ 
 
-![2d3d_maya_con](img/07/maya_convert.png)
+## 5. 3D Volumes
 
-### Drawing on 3D surface
+A 3D Volume is generated with two or more layers. The volume is an interpolation between layers and not real 3D geometry. This means that no mesh is generated and you cannot apply many of the 3D capabilities to it. This is primarily important for medical professionals working with [DICOM images](https://en.wikipedia.org/wiki/DICOM) or frames where viewing a volume rendering is useful. However, there are interesting effects you can create by simply taking multiple layers (raster or vector) and interpolating between the pixels to generate a volume.
 
-How to do: 
+- [Tutorial: How to Use 3D Volume in Photoshop - 3 Steps 3D Tutorial by SEO Skills, 5:06 ](https://www.youtube.com/watch?v=qcR1cTi-gmo)  
 
-**Preparation**
+_________
 
-- Select a base object and from the mouse right button menu, apply Make live.
-	- You can find a base object from Window / General Editors / Visor. In the Visor, under the Sculpting Base Meshes, there are several folders which have base meshes. You can select one and click the mouse right button then click the import Maya file pop-up menu.	
-	- [Set a live surface](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-EBF1E652-4DDD-423F-B42E-3BF85AE46A5D-htm.html)  
-	
-**Drawing on surface**
+## Materials
 
-- Select Mesh Tools / Create Polygons and draw on the surface. Once you finish, press enter to complete it.   
-- To make it as a stable polygon, apply Mesh / Triangulate  
-- To add thickness, select all faces (in the component mode) apply Edit Mesh / Extrude. and add a thickness value to Local Translate Z attribute. 	  
+Materials are important as they essentially define the appearance of the 3D object. Materials are made up of different properties that can be defined as a single value or a texture map that varies the value over the surface of the object. 
 
-**Subdivision**
+Where to download more materials: [photoshop.com](https://www.photoshop.com/products/photoshop/3d/content)  
 
-- To make it smoother and more organic, select the object and then apply Mesh / Smooth.  
+![3d](img/02/3d18.png) 
 
-![2d3d_maya_01](img/07/mask.png)
-![2d3d_maya_03](img/07/maya_live02.png)
-![2d3d_maya_04](img/07/maya_live03.png)
+From the above link, you can find free 3D models and more.
 
-### Constrain objects on a 3D surface
+## Render option
+- Menu: 3D/Render Settings...
 
-How: 
-- Related tutorial: [Normal (Constraint) #example_01](https://www.youtube.com/watch?v=ZsAiX6Xyf6A)
-
-- Select the constraining object and then shift-select the constrained object, and apply Animation module set // Contrain / Geometry constrain. 
-
-- Repeat the selection of constraining and constrained objects, and then apply Animation module set // Constrain / Normal constrain. 
-
-- You can change the constrained object's direction by its normal Constraint node / Normal Constraint Attributes. Change the Aim vector to change the direction. (1: on, 0:off)
-
-- If you want to duplicate the constrained object with its attributes, you can go Edit / Duplicate Special and check Duplicate Input Graph and duplicate your objects. They will behave the same as the previous objects. 
-
-![2d3d_maya_02](img/07/maya_live01.png)
-
-### Helpful references
-
-- [Maya: Troubleshoot imported vector data](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-05A64113-C6EE-4456-88A4-2ADCF23DD40E)  
-
-- [Maya: Import vector data as curves or generate polygonal surfaces](https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-EF3ED536-7C44-4225-AD4F-2FB0E0DD0362-htm.html)  
-
-- [From 2D to 3D Using Inkscape to Shapeways / OpenSCAD) by unkerjay in 3D-Printing](http://www.instructables.com/id/From-2D-to-3D-Using-Inkscape-to-Shapeways-OpenSCAD/)  
+![3d](img/02/3d19.png) 
 
 ______________________
 
-## Group Assignment
+# Action items
+- Use your images to create 3D objects in Photoshop and add them to your group presentation next week under the ***Practice*** section. 
 
+- Check out the reference book: Gee, Zorana, 3D in Photoshop, Focal Press, 2013. If you want to read via online, please make a Toronto public library card to access Safari online books digital library. 
 
+- Check out what we have covered today from these [Lynda tutorials](https://www.lynda.com/SharedPlaylist/b8dffe8f93ab43b289c670b58da579b9?org=ocadu.ca)
 		
 
 
@@ -193,8 +157,8 @@ ______________________
 		
 	
 		<h3>Class schedule</h3>	
-				<a href="01.html">Class 1 & 2</a><br/><!--
-				<a href="week02.html">2: 3D modeling overview</a><br/>
+				<a href="01.html">Class 1 & 2</a><br/>
+				<a href="02.html">Class 3</a><br/><!--
 				<a href="week03.html">3: NURBS modeling</a><br/>
 				<a href="week04.html">4: Polygon modeling</a><br/>
 				<a href="week05.html">5: Rendering</a><br/> 
