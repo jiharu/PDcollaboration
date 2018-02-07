@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Paint & Digital: Collaboration</title>
+    
+<link href="css/site.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/highlight.default.css" media="all" rel="stylesheet" type="text/css" />
+  
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js" type="text/javascript"></script>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+<!--
+Write the markdown code below.
+A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
+-->
+
+<div style="display: none" id="sourcetext">
+
+# Class 5: 3D painting 
+
+![texturing](img/donut.png) 
+Left image from Richard Singh. Right rendering image using Maya with Arnold renderer
+
+# UV texturing
+
+## UV mapping
+>UV stands for the horizontal (U) and vertical (V) coordinates of the 2D coordinate map space that is applied to a 3D object.
+
+UVs are 2D representations of a 3D object. There can be a problem with wrapping a 2D image (a texture) around a 3D object. UV mapping helps with this problem: UVs are directly related to vertices on a polygon and NURBS, but the UVs cannot be manipulated in 3D space; they are tied to a 2D coordinate plane and edited in a **UV editor**.
+
+> UVs are like a “where” — they are a coordinate system across the surface of polygons (think latitude and longitude across a globe). 
+> Understanding what UVs are and being able to manipulate them is incredibly powerful and allows any image to define the surface of a 3D form. ***Unfortunately, this power to manipulate UV is not a trivial task and can be very counterintuitive.*** 
+
+![tex_01](img/maya/UVMapping.png)  
+
+The application of a texture in the UV space related to its effect in 3D. CC BY-SA 3.0 [wikipedia](https://en.wikipedia.org/wiki/UV_mapping)
+
+![tex_02](img/maya/Cube_Representative_UV_Unwrapping.png)
+
+A representation of the UV mapping of a cube. The flattened cube net may then be textured to texture the cube. CC BY-SA 3.0 [wikipedia](https://en.wikipedia.org/wiki/UV_mapping)
+
+## Video
+- [The Basics Of UV Mapping by The Guerrilla CG Project](https://vimeo.com/5017993)  
+- [“On the Run” Creative Process - Part One by the Rusted Pixel](https://vimeo.com/120644464)  
+
+________________________
+
+## Create UVs for polygon surfaces (Modeling // UV /)
+### Using different mapping methods and check the UV Texture Editor.
+
+![uv01](img/maya/shading/texturing/uv.png)
+
+### Example of a 3D human model with the UV map.
+
+![uv01](img/maya/shading/texturing/uv01.png)
+
+(a) Planar, (b) cylindrical, (c) spherical, and (d) automatic mapping of a human model.
+
+![uv02](img/maya/shading/texturing/uv02.png)
+
+## UV texture map
+
+### A human head model with a uniform UV map and a nonuniform UV map.
+
+![uv03](img/maya/shading/texturing/uv03.png)
+
+### Examples of UV texture mapping
+![3dp01](img/maya/shading/texturing/texs.png)
+
+### The bumps and folds of a sculpture are roughed in with the 3D Paint tool
+![3dp](img/maya/shading/texturing/3dpaint.png)
+
+----------
+## UV Texture editor
+3D software uses u- and v-coordinates to determine how textures should be applied to 3D objects. **UV mapping** refers to the process of determining these coordinates for polygon objects. **UV layout** is a term that refers to the 2D configuration of the UVs on a surface. In the **UV Texture Editor**, u-coordinates are plotted along the horizontal axis, and v-coordinates are plotted along the vertical axis. **UV maps** act as a guide for the placement of images. 
+
+**NURBS surfaces have implicit UVs; this means that the coordinates are built into the parameterization of the surface. UV texture coordinates do not have to be created for NURBS surfaces; only polygon and subdivision surfaces require mapped UVs.**
+
+
+## Reference
+
+[Maya 2018 online Help](http://help.autodesk.com/view/MAYAUL/2018/ENU//)    
+
+- Art of Maya [pdf link](http://web.cse.ohio-state.edu/~parent/classes/682/MAYA/art_of_maya.pdf)    
+- [Maya 2018 UV editor overview](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-73BF7546-3BF2-44F3-9192-15A024CEC173)  
+- [Maya 2018: UV Toolkit Review, 13:27](https://www.youtube.com/watch?v=4gT3XAbOiV0)  
+- [UV mapping tips](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-1CEF8A5B-1051-40F1-ACFE-F29AD066F56F)  
+- [Layout UV shells](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-21CFF911-9C21-4019-B676-766ACA3BC889)  
+- [UV projection](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-B7E73748-5F8E-4E66-BE88-DF3C2A3DF438)  
+- [Displaying and Selecting UVs](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-764C4EB5-7050-477B-B866-76FE86758E7D)  
+
+
+### Further reading 
+- [OpenGL Cube Map Texturing tutorial from NVIDIA, 1999](http://www.nvidia.com/object/cube_map_ogl_tutorial.html)
+
+## UV Practice
+### Dice 
+
+- [Forward and Back Dice Template](https://www.earlylearninghq.org.uk/numeracy-resources/counting-games/forward-and-back-dice-template/)  
+	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2015/01/Forward-and-back-dice-prev.jpg)  
+- [Coin Dice Template (UK)](https://www.earlylearninghq.org.uk/numeracy-resources/coins/coin-dice-uk/)  	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2017/01/Coin-dice-prev.jpg)
+ 
+
+
+### Box texturing
+![tex](http://media.moddb.com/images/members/1/400/399748/skin_box.jpg)  
+
+
+# Practice 
+### Drawing on 3D surface
+
+How to do: 
+
+**Preparation**
+
+- Select a base object and from the mouse right button menu, apply Make live.
+	- You can find a base object from Window / General Editors / Visor. In the Visor, under the Sculpting Base Meshes, there are several folders which have base meshes. You can select one and click the mouse right button then click the import Maya file pop-up menu.	
+	- [Set a live surface](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-EBF1E652-4DDD-423F-B42E-3BF85AE46A5D-htm.html)  
+	
+**Drawing on surface**
+
+- Select Mesh Tools / Create Polygons and draw on the surface. Once you finish, press enter to complete it.   
+- To make it as a stable polygon, apply Mesh / Triangulate  
+- To add thickness, select all faces (in the component mode) apply Edit Mesh / Extrude. and add a thickness value to Local Translate Z attribute. 	  
+
+**Subdivision**
+
+- To make it smoother and more organic, select the object and then apply Mesh / Smooth.  
+
+![2d3d_maya_01](img/07/mask.png)
+![2d3d_maya_03](img/07/maya_live02.png)
+![2d3d_maya_04](img/07/maya_live03.png)
+
+### Constrain objects on a 3D surface
+
+How: 
+- Related tutorial: [Normal (Constraint) #example_01](https://www.youtube.com/watch?v=ZsAiX6Xyf6A)
+
+- Select the constraining object and then shift-select the constrained object, and apply Animation module set // Contrain / Geometry constrain. 
+
+- Repeat the selection of constraining and constrained objects, and then apply Animation module set // Constrain / Normal constrain. 
+
+- You can change the constrained object's direction by its normal Constraint node / Normal Constraint Attributes. Change the Aim vector to change the direction. (1: on, 0:off)
+
+- If you want to duplicate the constrained object with its attributes, you can go Edit / Duplicate Special and check Duplicate Input Graph and duplicate your objects. They will behave the same as the previous objects. 
+
+![2d3d_maya_02](img/07/maya_live01.png)
+
+### Helpful references
+
+- [Maya: Troubleshoot imported vector data](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-05A64113-C6EE-4456-88A4-2ADCF23DD40E)  
+
+- [Maya: Import vector data as curves or generate polygonal surfaces](https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-EF3ED536-7C44-4225-AD4F-2FB0E0DD0362-htm.html)  
+
+- [From 2D to 3D Using Inkscape to Shapeways / OpenSCAD) by unkerjay in 3D-Printing](http://www.instructables.com/id/From-2D-to-3D-Using-Inkscape-to-Shapeways-OpenSCAD/)  
+
+______________________
+
+## Group Assignment
+
+
+		
+
+
+	 
+
+
+</div>
+<div id="wrapper">
+	
+	<div class="header">
+		
+		<h1>DRPT3015</h1>		
+		<a href="index.html">Class outline</a><br/>
+		<a href="https://docs.google.com/spreadsheets/d/1CCSYvgL-8i0aY_FCWJcuGD0ADQyJ-p6gKoaqgF6uBw0/edit?usp=sharing">Class schedule / attendance</a><br/>
+		<a href="https://www.lynda.com/SharedPlaylist/b8dffe8f93ab43b289c670b58da579b9?org=ocadu.ca">Linda tutorial</a><br/><br/>  
+		
+	
+		<h3>Class schedule</h3>	
+				<a href="01.html">Class 1 & 2</a><br/>
+				<a href="02.html">Class 3</a><br/><!--
+				<a href="week03.html">3: NURBS modeling</a><br/>
+				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="week05.html">5: Rendering</a><br/> 
+				<a href="week06.html">6: Shading</a><br/>								
+				<a href="week07.html">7: Texturing</a><br/>  
+				<a href="week08.html">8: Cinematography</a><br/>
+				<a href="week09.html">9: Modeling techniques</a><br/>
+				<a href="week10.html">10: Animation I</a><br/>	
+				<a href="week11.html">11: Animation II</a><br/>	
+				<a href="week12.html">12: Arnold: Physically Based Renderer</a><br/>-->
+	
+	</div>
+	<div class="section">
+		<script type="text/javascript">
+		//var converter = new Markdown.Converter();
+		var converter = new Showdown.converter();
+		document.write(converter.makeHtml($('#sourcetext').text()));
+		</script>
+	</div>
+	
+	<div class="footer">Haru (Hyunkyung) Ji, 2018</div>
+	
+</div>
+</body>
+</html>
