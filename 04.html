@@ -20,147 +20,114 @@ A guide to markdown syntax is at http://daringfireball.net/projects/markdown/
 
 <div style="display: none" id="sourcetext">
 
-# Class 5: 3D painting 
+# AR Practice 
+Creating **Augmented Reality (or VR)** with **AR.js** and **A-Frame**:   
+This AR/VR method is simple, cross-platform, and open source for artist's practices! 
 
-![texturing](img/donut.png) 
-Left image from Richard Singh. Right rendering image using Maya with Arnold renderer
+## Reading: historical background
+- [Augmented Reality: “The Ultimate Display” by Ivan Sutherland, 1965](https://www.wired.com/2009/09/augmented-reality-the-ultimate-display-by-ivan-sutherland-1965/)
+- [Responsive Environments, Myron W. Krueger, 1977](http://www.ctcs505.com/wp-content/uploads/2016/01/Krueger.pdf)	
+- [The Poetics of Augmented Space,
+Lev Manovich, 2005](http://manovich.net/content/04-projects/034-the-poetics-of-augmented-space/31_article_2002.pdf)  
 
-# UV texturing
+## AR/VR fundamental by Michael Naimark
+Michael Naimark: Artist, inventor, and first generation scholar in the fields of virtual reality and new media.  
 
-## UV mapping
->UV stands for the horizontal (U) and vertical (V) coordinates of the 2D coordinate map space that is applied to a 3D object.
+- [https://medium.com/@michaelnaimark](https://medium.com/@michaelnaimark)  
 
-UVs are 2D representations of a 3D object. There can be a problem with wrapping a 2D image (a texture) around a 3D object. UV mapping helps with this problem: UVs are directly related to vertices on a polygon and NURBS, but the UVs cannot be manipulated in 3D space; they are tied to a 2D coordinate plane and edited in a **UV editor**.
-
-> UVs are like a “where” — they are a coordinate system across the surface of polygons (think latitude and longitude across a globe). 
-> Understanding what UVs are and being able to manipulate them is incredibly powerful and allows any image to define the surface of a 3D form. ***Unfortunately, this power to manipulate UV is not a trivial task and can be very counterintuitive.*** 
-
-![tex_01](img/maya/UVMapping.png)  
-
-The application of a texture in the UV space related to its effect in 3D. CC BY-SA 3.0 [wikipedia](https://en.wikipedia.org/wiki/UV_mapping)
-
-![tex_02](img/maya/Cube_Representative_UV_Unwrapping.png)
-
-A representation of the UV mapping of a cube. The flattened cube net may then be textured to texture the cube. CC BY-SA 3.0 [wikipedia](https://en.wikipedia.org/wiki/UV_mapping)
-
-## Video
-- [The Basics Of UV Mapping by The Guerrilla CG Project](https://vimeo.com/5017993)  
-- [“On the Run” Creative Process - Part One by the Rusted Pixel](https://vimeo.com/120644464)  
-
-________________________
-
-## Create UVs for polygon surfaces (Modeling // UV /)
-### Using different mapping methods and check the UV Texture Editor.
-
-![uv01](img/maya/shading/texturing/uv.png)
-
-### Example of a 3D human model with the UV map.
-
-![uv01](img/maya/shading/texturing/uv01.png)
-
-(a) Planar, (b) cylindrical, (c) spherical, and (d) automatic mapping of a human model.
-
-![uv02](img/maya/shading/texturing/uv02.png)
-
-## UV texture map
-
-### A human head model with a uniform UV map and a nonuniform UV map.
-
-![uv03](img/maya/shading/texturing/uv03.png)
-
-### Examples of UV texture mapping
-![3dp01](img/maya/shading/texturing/texs.png)
-
-### The bumps and folds of a sculpture are roughed in with the 3D Paint tool
-![3dp](img/maya/shading/texturing/3dpaint.png)
-
-----------
-## UV Texture editor
-3D software uses u- and v-coordinates to determine how textures should be applied to 3D objects. **UV mapping** refers to the process of determining these coordinates for polygon objects. **UV layout** is a term that refers to the 2D configuration of the UVs on a surface. In the **UV Texture Editor**, u-coordinates are plotted along the horizontal axis, and v-coordinates are plotted along the vertical axis. **UV maps** act as a guide for the placement of images. 
-
-**NURBS surfaces have implicit UVs; this means that the coordinates are built into the parameterization of the surface. UV texture coordinates do not have to be created for NURBS surfaces; only polygon and subdivision surfaces require mapped UVs.**
-
+## Case studies
+- [SketchAR](https://www.youtube.com/watch?time_continue=37&v=awHhe00V_1s)  
+	- [Augmented Reality With HTML5](https://marmelab.com/blog/2017/06/19/augmented-reality-html5.html) 
+	
+- [AR.js - Efficient Augmented Reality for the Web](https://www.youtube.com/watch?list=PL2oSKUSmuoTECUCvHDvifRhztkOYduQsq&v=0MtvjFg7tik)  
+- [Augmented Reality and Artificial Vision Demo by NeuroSystems](https://www.youtube.com/watch?v=5csgl4UDbZM)  	
 
 ## Reference
+- [Creating Augmented Reality with AR.js and A-Frame](https://aframe.io/blog/arjs/) by Jerome Etienne.
 
-[Maya 2018 online Help](http://help.autodesk.com/view/MAYAUL/2018/ENU//)    
+![ar](https://user-images.githubusercontent.com/6317076/27866704-452eaed6-618f-11e7-9cdd-2deaef865e3e.png) 
 
-- Art of Maya [pdf link](http://web.cse.ohio-state.edu/~parent/classes/682/MAYA/art_of_maya.pdf)    
-- [Maya 2018 UV editor overview](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-73BF7546-3BF2-44F3-9192-15A024CEC173)  
-- [Maya 2018: UV Toolkit Review, 13:27](https://www.youtube.com/watch?v=4gT3XAbOiV0)  
-- [UV mapping tips](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-1CEF8A5B-1051-40F1-ACFE-F29AD066F56F)  
-- [Layout UV shells](http://help.autodesk.com/view/MAYAUL/2018/ENU/?guid=GUID-21CFF911-9C21-4019-B676-766ACA3BC889)  
-- [UV projection](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-B7E73748-5F8E-4E66-BE88-DF3C2A3DF438)  
-- [Displaying and Selecting UVs](http://help.autodesk.com/view/MAYAUL/2018/ENU//index.html?guid=GUID-764C4EB5-7050-477B-B866-76FE86758E7D)  
+- [WebVR for Augmented Reality](https://medium.com/arjs/webvr-for-augmented-reality-f1e69a505902)  
+	- [WebVR](https://webvr.info/)
+		WebVR is an open specification that makes it possible to experience VR in your browser. The goal is to make it easier for everyone to get into VR experiences, no matter what device you have.
 
+## AR.js
+[AR.js](https://jeromeetienne.github.io/AR.js/): Efficient Augmented Reality for the Web. It is marker based.   
 
-### Further reading 
-- [OpenGL Cube Map Texturing tutorial from NVIDIA, 1999](http://www.nvidia.com/object/cube_map_ogl_tutorial.html)
+- [Try it on Mobile](https://jeromeetienne.github.io/AR.js/) 
+- Hiro marker image:  
+ ![ar](http://jeromeetienne.github.io/slides/artoolkit-aframe/images/hiro.png)
 
-## UV Practice
-### Dice 
+### Features
+- **Very Fast:** it runs efficiently even on phones. 60 fps on the 2 year-old phone. 
+- **Web-based:** It is a pure web solution, so no installation required. Full javascript - based on three.js + jsartoolkit5
+- **Open Source:** It is completely open source and free of charge!
+- **Standards:** It works on any phone with webgl and webrtc. 
 
-- [Forward and Back Dice Template](https://www.earlylearninghq.org.uk/numeracy-resources/counting-games/forward-and-back-dice-template/)  
-	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2015/01/Forward-and-back-dice-prev.jpg)  
-- [Coin Dice Template (UK)](https://www.earlylearninghq.org.uk/numeracy-resources/coins/coin-dice-uk/)  	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2017/01/Coin-dice-prev.jpg)
- 
+## A-Frame
+A-Frame is a web framework for building virtual reality (VR) experiences. Originally from Mozilla, A-Frame was developed to be an easy but powerful way to develop VR content. As an independent open source project, A-Frame has grown to be one of the largest and most welcoming VR communities.
 
+A-Frame is based on top of HTML, making it simple to get started. But A-Frame is not just a 3D scene graph or a markup language; the core is a powerful entity-component framework that provides a declarative, extensible, and composable structure to three.js.
 
-### Box texturing
-![tex](http://media.moddb.com/images/members/1/400/399748/skin_box.jpg)  
+A-Frame supports most VR headsets such as Vive, Rift, Daydream, GearVR, Cardboard, and can even be used for augmented reality. Although A-Frame supports the whole spectrum, A-Frame aims to define fully immersive interactive VR experiences that go beyond basic 360° content, making full use of positional tracking and controllers.
 
+### A-Frame references
+- [A-Frame manual.](https://aframe.io/docs/0.7.0/introduction/)  
+- [A-Frame school with example sources.](https://aframe.io/)  
 
-# Practice 
-### Drawing on 3D surface
+# Practice
+## Codepen
+> CodePen is a playground for the front end side of the web. Need to build a reduced test case to demonstrate and figure out a bug? CodePen is great for that. Want to show off your latest creation and get feedback from your peers? CodePen is great for that. Want to find examples of a particular design pattern for your project? CodePen is great for that. - [codepen.io](https://codepen.io/about/)
 
-How to do: 
+### Codepen set-up 
 
-**Preparation**
-
-- Select a base object and from the mouse right button menu, apply Make live.
-	- You can find a base object from Window / General Editors / Visor. In the Visor, under the Sculpting Base Meshes, there are several folders which have base meshes. You can select one and click the mouse right button then click the import Maya file pop-up menu.	
-	- [Set a live surface](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-EBF1E652-4DDD-423F-B42E-3BF85AE46A5D-htm.html)  
+- Let's create an account. [codepen link](https://codepen.io/)
 	
-**Drawing on surface**
+- Create a new pen. 
 
-- Select Mesh Tools / Create Polygons and draw on the surface. Once you finish, press enter to complete it.   
-- To make it as a stable polygon, apply Mesh / Triangulate  
-- To add thickness, select all faces (in the component mode) apply Edit Mesh / Extrude. and add a thickness value to Local Translate Z attribute. 	  
+- There are three text boxes: HTML, CSS, and JS (JavaScript). Mostly we will only use the HTML box to enter code. Shrink the CSS and JS boxes to have a bigger space in the HTML box. 
 
-**Subdivision**
+- You may also want to open the browser console, where any errors will be printed. How to do this depends on what browser you use. E.g. in Chrome, it is under View / Developer > JavaScript Console. In Firefox it is Tools / Web Developer > Browser Console. [For other browsers click here.](https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers)
 
-- To make it smoother and more organic, select the object and then apply Mesh / Smooth.  
+- Optional: you can disable Auto-Updating Preview under Behavior in the setting box. The Run button will appear at the top right pannel. (Sometimes auto-updating can be distracting or cause the browser to crash due to an infinite loop while you are typing.)
 
-![2d3d_maya_01](img/07/mask.png)
-![2d3d_maya_03](img/07/maya_live02.png)
-![2d3d_maya_04](img/07/maya_live03.png)
+- CODEPEN documentation: [https://blog.codepen.io/documentation/](https://blog.codepen.io/documentation/) 
 
-### Constrain objects on a 3D surface
+## Augmented Reality in 10 Lines of HTML
+- [Augmented Reality in 10 Lines of HTML Medium article.](https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf)  
+	- [AR.js - Augmented Reality in 10 lines of html Codepen link.](https://codepen.io/jeromeetienne/pen/mRqqzb) 
+	- [How To Create your Own Marker?](https://medium.com/arjs/how-to-create-your-own-marker-44becbec1105)  
+	- [how to load my own model in AR?](https://aframe.io/docs/0.7.0/introduction/models.html)  
+		A-Frame provides components for loading glTF, OBJ, COLLADA. We recommend using glTF if possible as glTF gains adoption as the standard for transmitting 3D models over the Web. 
+		- [glTF](https://www.khronos.org/gltf/): efficient runtime 3D asset delivery. Portable 3D graphics transmission Format.  
+glTF™ (GL Transmission Format) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.  
+			- Compact to transmit.
+			- Fast to load.
+			- Describes full scenes. 
+			- Runtime neutral.
+			- Open and extensible.
+		- Maya to glTF	
+			- [Maya2glTF converter](https://github.com/Ziriax/Maya2glTF)  
+			- [Exporting glTF 2.0 from Maya LT](https://www.donmccurdy.com/2017/06/27/exporting-gltf-2-0-from-maya-lt-2/)
+	- [Hosting Assets](https://aframe.io/docs/0.7.0/introduction/hosting-and-publishing.html#hosting-assets)  
+		- Let's make your image from your website appear as your mobile AR.
+			- [A-Frame a-image manual](https://aframe.io/docs/0.7.0/primitives/a-image.html)  
+			
+```
+&lt;a-scene&gt;
+	&lt;a-assets&gt;
+		&lt;img id="my-image" src="your image address"&gt;
+	&lt;/a-assets&gt;
 
-How: 
-- Related tutorial: [Normal (Constraint) #example_01](https://www.youtube.com/watch?v=ZsAiX6Xyf6A)
-
-- Select the constraining object and then shift-select the constrained object, and apply Animation module set // Contrain / Geometry constrain. 
-
-- Repeat the selection of constraining and constrained objects, and then apply Animation module set // Constrain / Normal constrain. 
-
-- You can change the constrained object's direction by its normal Constraint node / Normal Constraint Attributes. Change the Aim vector to change the direction. (1: on, 0:off)
-
-- If you want to duplicate the constrained object with its attributes, you can go Edit / Duplicate Special and check Duplicate Input Graph and duplicate your objects. They will behave the same as the previous objects. 
-
-![2d3d_maya_02](img/07/maya_live01.png)
-
-### Helpful references
-
-- [Maya: Troubleshoot imported vector data](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-05A64113-C6EE-4456-88A4-2ADCF23DD40E)  
-
-- [Maya: Import vector data as curves or generate polygonal surfaces](https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-EF3ED536-7C44-4225-AD4F-2FB0E0DD0362-htm.html)  
-
-- [From 2D to 3D Using Inkscape to Shapeways / OpenSCAD) by unkerjay in 3D-Printing](http://www.instructables.com/id/From-2D-to-3D-Using-Inkscape-to-Shapeways-OpenSCAD/)  
-
-______________________
-
-## Group Assignment
+	&lt;!-- Using the asset management system. --&gt;
+	&lt;a-image src="#my-image"&gt;&lt;/a-image&gt;
+&lt;/a-scene&gt;
+```
+				
+ 
+ 	
+## More related references
+- [Magic Windows and Mixed-Up Realities: a course on AR at ITP-NYU | Rui Pereira | ARIA](https://www.youtube.com/watch?v=rRteAoV8mOM&feature=youtu.be)  
 
 
 		
@@ -174,17 +141,19 @@ ______________________
 	
 	<div class="header">
 		
-		<h1>DRPT3015</h1>		
+		<h1>DRPT3015</h1>
+		<h2>Image in World</h2>  
+		
 		<a href="index.html">Class outline</a><br/>
 		<a href="https://docs.google.com/spreadsheets/d/1CCSYvgL-8i0aY_FCWJcuGD0ADQyJ-p6gKoaqgF6uBw0/edit?usp=sharing">Class schedule / attendance</a><br/>
 		<a href="https://www.lynda.com/SharedPlaylist/b8dffe8f93ab43b289c670b58da579b9?org=ocadu.ca">Linda tutorial</a><br/><br/>  
 		
 	
 		<h3>Class schedule</h3>	
-				<a href="01.html">Class 1 & 2</a><br/>
-				<a href="02.html">Class 3</a><br/>
-				<a href="03.html">Class 4</a><br/><!--
-				<a href="week04.html">4: Polygon modeling</a><br/>
+				<a href="01.html">Introduction & Inspiration</a><br/>
+				<a href="02.html">3D in Photoshop</a><br/>
+				<a href="03.html">UV texturing</a><br/>
+				<a href="04.html">AR practice</a><br/><!--
 				<a href="week05.html">5: Rendering</a><br/> 
 				<a href="week06.html">6: Shading</a><br/>								
 				<a href="week07.html">7: Texturing</a><br/>  
