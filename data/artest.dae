@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
-  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2018-03-21T02:58:47Z</created><keywords></keywords><modified>2018-03-21T02:58:47Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2018-03-21T18:49:37Z</created><keywords></keywords><modified>2018-03-21T18:49:37Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="file3-image" name="file3"><init_from>file:///Users/jiharu/Documents/HaruDocu/HaruWork/Maya/Projects/2018/2018_intm3d/sourceimages/fox.png</init_from></image>
+  </library_images>
   <library_materials>
     <material id="blinn4" name="blinn4">
       <instance_effect url="#blinn4-fx"/>
@@ -59,7 +62,15 @@
               <color sid="ambient">1.000000  1.000000 1.000000 1.000000</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.800000  0.000000 0.000000 1.000000</color>
+              <texture texture="file3-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>NONE</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
             </diffuse>
             <specular>
               <color sid="specular">0.500000  0.500000 0.500000 1.000000</color>
@@ -1368,12 +1379,12 @@
     </geometry>
   </library_geometries>
   <library_visual_scenes>
-    <visual_scene id="artest" name="artest">
+    <visual_scene id="artest2" name="artest2">
       <node name="pSphere1" id="pSphere1" sid="pSphere1"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#pSphere1-lib"><bind_material><technique_common><instance_material symbol="blinn4" target="#blinn4"/><instance_material symbol="blinn1" target="#blinn1"/><instance_material symbol="blinn3" target="#blinn3"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
       <extra><technique profile="MAX3D"><frame_rate>24.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.041667</start_time><end_time>8.333333</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>
   <scene>
-    <instance_visual_scene url="#artest"></instance_visual_scene>
+    <instance_visual_scene url="#artest2"></instance_visual_scene>
   </scene>
 </COLLADA>
