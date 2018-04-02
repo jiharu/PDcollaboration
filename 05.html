@@ -27,90 +27,71 @@ PMC is a community resource for all things projection mapping a.k.a. video mappi
 
 ______________________
 
-## Group Assignment
+# AR texture
 
+![ar](img/ar01.png)  
+The model is saved as a Collada file (.dae). Object modeling by Richard Singh
 
-# Class 5: 3D painting 
+![ar](img/ar02.png)  
+The mask model is saved as an obj file then transferred as a gltf file. Object modeling and texture by Marina Karaiskou, Celina Chan, and Elizabeth Viscomi
 
-![texturing](img/donut.png) 
-Left image from Richard Singh. Right rendering image using Maya with Arnold renderer
+## Where you can convert Collada (.dae) models or OBJ models to glTF files. 
+- [Cesium convertmodel.html](http://52.4.31.236/convertmodel.html) 
 
-# Projection mapping
-- [PMC](http://projection-mapping.org/)  
-PMC is a community resource for all things projection mapping a.k.a. video mapping.
+## Inspiration
+- [Floating shiny knot](https://www.clicktorelease.com/code/streetViewReflectionMapping/#43.65334483955087,-79.39100197452092): Millions of environment map textures with Google Street View panoramas.  
+	You'll need Chrome, Firefox 8+, or another browser that supports CORS canvas textures.  
+	Code by @thespite · Built with three.js · Tweaking and optimisations by Mr.doob · Inspired on Paul Lewis' Create your own environment maps article.
 
-### Further reading 
-- [OpenGL Cube Map Texturing tutorial from NVIDIA, 1999](http://www.nvidia.com/object/cube_map_ogl_tutorial.html)
+## Related readings from Medium.com
+- [One more time with AR by Pavel Laptev, Mar 4 2018](https://medium.com/inborn-experience/one-more-time-with-ar-b8c93e689e3b)  
+This article gives a good grip on the comparison between Web VR/AR to Unity/Vuforia practices and introduces the making processes in detail using Unity and Vuforia.  
 
-## UV Practice
-### Dice 
-
-- [Forward and Back Dice Template](https://www.earlylearninghq.org.uk/numeracy-resources/counting-games/forward-and-back-dice-template/)  
-	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2015/01/Forward-and-back-dice-prev.jpg)  
-- [Coin Dice Template (UK)](https://www.earlylearninghq.org.uk/numeracy-resources/coins/coin-dice-uk/)  	![tex](https://www.earlylearninghq.org.uk/wp-content/uploads/2017/01/Coin-dice-prev.jpg)
- 
-
-
-### Box texturing
-![tex](http://media.moddb.com/images/members/1/400/399748/skin_box.jpg)  
-
-
-# Practice 
-### Drawing on 3D surface
-
-How to do: 
-
-**Preparation**
-
-- Select a base object and from the mouse right button menu, apply Make live.
-	- You can find a base object from Window / General Editors / Visor. In the Visor, under the Sculpting Base Meshes, there are several folders which have base meshes. You can select one and click the mouse right button then click the import Maya file pop-up menu.	
-	- [Set a live surface](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-EBF1E652-4DDD-423F-B42E-3BF85AE46A5D-htm.html)  
-	
-**Drawing on surface**
-
-- Select Mesh Tools / Create Polygons and draw on the surface. Once you finish, press enter to complete it.   
-- To make it as a stable polygon, apply Mesh / Triangulate  
-- To add thickness, select all faces (in the component mode) apply Edit Mesh / Extrude. and add a thickness value to Local Translate Z attribute. 	  
-
-**Subdivision**
-
-- To make it smoother and more organic, select the object and then apply Mesh / Smooth.  
-
-![2d3d_maya_01](img/07/mask.png)
-![2d3d_maya_03](img/07/maya_live02.png)
-![2d3d_maya_04](img/07/maya_live03.png)
-
-### Constrain objects on a 3D surface
-
-How: 
-- Related tutorial: [Normal (Constraint) #example_01](https://www.youtube.com/watch?v=ZsAiX6Xyf6A)
-
-- Select the constraining object and then shift-select the constrained object, and apply Animation module set // Contrain / Geometry constrain. 
-
-- Repeat the selection of constraining and constrained objects, and then apply Animation module set // Constrain / Normal constrain. 
-
-- You can change the constrained object's direction by its normal Constraint node / Normal Constraint Attributes. Change the Aim vector to change the direction. (1: on, 0:off)
-
-- If you want to duplicate the constrained object with its attributes, you can go Edit / Duplicate Special and check Duplicate Input Graph and duplicate your objects. They will behave the same as the previous objects. 
-
-![2d3d_maya_02](img/07/maya_live01.png)
-
-### Helpful references
-
-- [Maya: Troubleshoot imported vector data](http://help.autodesk.com/view/MAYAUL/2016/ENU//index.html?guid=GUID-05A64113-C6EE-4456-88A4-2ADCF23DD40E)  
-
-- [Maya: Import vector data as curves or generate polygonal surfaces](https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-EF3ED536-7C44-4225-AD4F-2FB0E0DD0362-htm.html)  
-
-- [From 2D to 3D Using Inkscape to Shapeways / OpenSCAD) by unkerjay in 3D-Printing](http://www.instructables.com/id/From-2D-to-3D-Using-Inkscape-to-Shapeways-OpenSCAD/)  
-
-______________________
-
-## Group Assignment
-
-
+	- Table of contents
+		- Start with Unity 3D + Vuforia
+		- Modeling
+		- Rig for the model
+		- Background modelling
+		- Texturing
+		- Animation
+		- Augmented Reality in Unity 3D
+		- Vuforia AR
+		- Build AR app on the phone
+		- Model on Sketchfab
+		- Conclusion 
 		
+- [VR/AR prototyping for everyone by Pavel Laptev, Nov 26, 2017](https://medium.com/inborn-experience/vr-ar-prototyping-for-everyone-ea6fb8f159b5)    
+This article gives a thorough overview of VR history and how to create web based VR/AR content using A-Frame and AR.js.   
 
+	- Table of contents
+		- VR history
+		- A-Frame
+		- Prototyping VR/AR
+		- AR.js and A-Frame
+		- Framer and AR.js 
+		
+- [Why hiring for VR/AR is only going to get harder… by Jobs in XR, Jan 3, 2018](https://arvrjourney.com/why-hiring-for-vr-ar-is-only-going-to-get-harder-5dd7e4af3a43)   
+This is more like an advertisement description for JobsinXR.com by the company. However, readers can have a good overview about the job market in AR, VR, and MR.  		
+		
+## Advanced painting tool
+- [Expresii](http://www.expresii.com/)  
+	- [Expresii Official Release Intro](http://www.expresii.com/)
+	
+## Quill demonstration
+[Quill](https://quill.fb.com/) is a VR illustration and animation tool built to empower artists and creators.
 
+- [Quill - Paint and Animate in VR by Goro Fujita](https://www.youtube.com/watch?v=AE50C3YQHYI)  
+- [Quill painting by Erasmus_Tycho](https://www.youtube.com/watch?v=jpkDEpJyWpk)  	
+	 
+## Next class schedules
+- Apr 9th 8:30 to 11:30am at 230 Richmond St West Suite # 316
+	- Feedback on individual projects.	 
+- Final formal assessment date: Apr 11th 8:30 to 11:30AM at MCA-340
+	- Please make a presentation file presenting your final image as well as your artist statement along with your challenges and how you solved problems. Please include all references to your images and references.   
+	- Where to upload: [Google slides](https://docs.google.com/presentation/d/1N2T17Gk9VZ_tSEv88dyrSLTr4rD9YrEK_nuRJZWJP-A/edit?usp=sharing)  
+	
+## Class evaluation
+- It is your opportunity to build a better class. Please participate in the class evaluation. Due date is Apr 6th.	
 	 
 
 
@@ -130,8 +111,8 @@ ______________________
 				<a href="01.html">Introduction & Inspiration</a><br/>
 				<a href="02.html">3D in Photoshop</a><br/>
 				<a href="03.html">UV texturing</a><br/>
-				<a href="04.html">AR practice</a><br/><!--
-				<a href="week05.html">5: Rendering</a><br/> 
+				<a href="04.html">AR practice</a><br/>
+				<a href="05.html">XR</a><br/> <!--
 				<a href="week06.html">6: Shading</a><br/>								
 				<a href="week07.html">7: Texturing</a><br/>  
 				<a href="week08.html">8: Cinematography</a><br/>
